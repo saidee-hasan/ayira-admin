@@ -88,7 +88,8 @@ const corsOptions = {
     "https://ayira-ecommerce-main.vercel.app",
     "https://aaryansourcing.com",
     "http://localhost:5173",
-    "https://devnas1.vercel.app"
+    "https://devnas1.vercel.app",
+    "https://aaryan-admin.netlify.app"
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
