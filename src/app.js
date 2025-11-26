@@ -80,21 +80,28 @@ app.use(express.urlencoded({
   parameterLimit: 1000
 }));
 
-// CORS Configuration
 const corsOptions = {
   origin: process.env.ALLOWED_ORIGINS?.split(',') || [
     "http://localhost:3000",
     "http://localhost:5000",
+
+    // Your production frontends
     "https://ayira-ecommerce-main.vercel.app",
     "https://aaryansourcing.com",
+    "https://aaryan-admin.netlify.app",
+
+    // Your backend/API domain
+    "https://admin.aaryansourcing.com",
+
+    // Dev/Test
     "http://localhost:5173",
-    "https://devnas1.vercel.app",
-    "https://aaryan-admin.netlify.app"
+    "https://devnas1.vercel.app"
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 };
+
 app.use(cors(corsOptions));
 
 // Rate Limiting
