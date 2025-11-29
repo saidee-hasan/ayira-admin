@@ -119,10 +119,10 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads'), {
   }
 }));
 
-// Cache middleware for public routes with Redis
-app.use('/api/v1/products', cacheMiddleware(300, true)); // 5 minutes with Redis
-app.use('/api/v1/categories', cacheMiddleware(3600, true)); // 1 hour with Redis
-app.use('/api/v1/brands', cacheMiddleware(1800, true)); // 30 minutes with Redis
+// // Cache middleware for public routes with Redis
+// app.use('/api/v1/products', cacheMiddleware(300, true)); // 5 minutes with Redis
+// app.use('/api/v1/categories', cacheMiddleware(3600, true)); // 1 hour with Redis
+// app.use('/api/v1/brands', cacheMiddleware(1800, true)); // 30 minutes with Redis
 
 // API Routes v1
 app.use('/api/v1/auth', authRoutes);
